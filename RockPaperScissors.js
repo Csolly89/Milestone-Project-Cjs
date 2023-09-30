@@ -9,53 +9,71 @@ let result;
 choiceBtns.forEach(button => button.addEventListener("click", () => {
 
     player = button.textContent;
-    computerTurn();
+    computerSlct = computerSelection();
     playerText.textContent = `Player: ${player}`;
-    computerText.textContent = `Skynet: ${computer}`;
-    resultText.textContent = checkWinner();
+    computerText.textContent = `Skynet: ${computerSlct}`;
+    resultText.textContent = checkWinner(player, computerSlct);
 }));
 
+function computerSelection(){
+  const randNum = Math.floor(Math.random() * 3 )
+    if (randNum === 0) {
+      return "ROCK"
+    } else if (randNum === 1){
+      return "PAPER"
+      } else {
+          return "SCISSORS"
+        }
+}
 
+function checkWinner(player,computerSelection){
 
-
-
-// Save for easter egg selection
-// let easterEggSelection = [
-//   {
-//     name: 'ROCK ',
-//     beats: 'SCISSORS','ROCK':'PAPER'
-//   }
-
-// ]
-
-function computerTurn(){
-
-  const randNum = Math.floor(Math.random() * 3 ) + 1
-
-  switch(randNum){
-    case 1:
-      computer = "ROCK";
-      beats = "SCISSORS"
-      break;
-    case 2:
-      computer = "PAPER"
-      beats = "ROCK"
-      break;
-    case 3:
-      computer = "SCISSORS"
-      beats = "PAPER"
-      break;
+  switch(player){
+    //rock
+    case 'ROCK': 
+      if(computerSelection === "SCISSORS"){
+        //score++;
+          return "VICTORY!!"
+        }
+          else if(computerSelection === "PAPER"){
+            //score--;
+            return "DOOM TO YOU";
+            }
+              else {
+                return "DRAW"
+                }
+        
+    // paper
+    case 'PAPER':
+      if(computerSelection === "ROCK"){
+        //score++;
+          return "VICTORY!!"
+          }
+            else if(computerSelection === "SCISSORS"){
+             //score--;
+                return "DOOM TO YOU";
+              }
+                else {
+                  return "DRAW"
+                  }
+              
+    // scissors
+    case 'SCISSORS':
+      if(computerSelection === "PAPER"){
+        //score++;
+          return "VICTORY!!"
+        }
+          else if(computerSelection === "ROCK"){
+            //score--;
+            return "DOOM TO YOU";
+            }
+              else {
+                return "DRAW"
+               }
+              
   }
 }
 
-function checkWinner(){
-    if(player == computer){
-      return "Draw!";
-    }
-    else if(computer == "ROCK"){
-      return (player == "PAPER");    }
-    else if(computer == "PAPER"){
-      return (player == "SCISSORS");    }
-    else if(computer == "SCISSORS"){
-      return (player == "ROCK");    }
-}
+
+// datastacks-arrays - dynamically expand array - delete array after each loss so it'll take when it gets to 3 and triggers lava function
+// import-export js scripts from to another for lava function at the end

@@ -15,22 +15,39 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
     resultText.textContent = checkWinner();
 }));
 
+
+
+
+
+// Save for easter egg selection
+// let easterEggSelection = [
+//   {
+//     name: 'ROCK ',
+//     beats: 'SCISSORS','ROCK':'PAPER'
+//   }
+
+// ]
+
 function computerTurn(){
 
-    const randNum = Math.floor(Math.random() * 3) + 1;
+  const randNum = Math.floor(Math.random() * 3 ) + 1
 
-    switch(randNum){
-      case 1:
-        computer = "ROCK";
-        break;
-      case 2:
-        computer = "PAPER";
-        break;
-      case 3:
-        computer = "SCISSORS";
-        break;
-    }
+  switch(randNum){
+    case 1:
+      computer = "ROCK";
+      beats = "SCISSORS"
+      break;
+    case 2:
+      computer = "PAPER"
+      beats = "ROCK"
+      break;
+    case 3:
+      computer = "SCISSORS"
+      beats = "PAPER"
+      break;
+  }
 }
+
 function checkWinner(){
     if(player == computer){
       return "Draw!";

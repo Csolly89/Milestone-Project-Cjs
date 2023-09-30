@@ -1,0 +1,32 @@
+#gameContainer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(141, 24, 0);
+    text-align: center;
+    border-radius: 35px;
+    border: 3px solid;
+
+}
+
+#player1{
+    color:aliceblue;
+}
+
+#outcome{
+    color:crimson;
+}
+
+.Points{
+    color:aliceblue;
+    padding:2px;
+    margin-top:4rem;
+}
+
+span{
+    padding:5px;
+    font-size:.8rem;
+}
+
+.yourChoice{
+    line-height: 20px;
+    width:120px;
+}

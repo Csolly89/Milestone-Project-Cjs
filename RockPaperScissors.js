@@ -29,7 +29,6 @@ function computerSelection(){
 function checkWinner(player,computerSelection){
 
   switch(player){
-    //rock
     case 'ROCK': 
       if(computerSelection === "SCISSORS"){
         //score++;
@@ -43,7 +42,6 @@ function checkWinner(player,computerSelection){
                 return "DRAW"
                 }
         
-    // paper
     case 'PAPER':
       if(computerSelection === "ROCK"){
         //score++;
@@ -57,7 +55,6 @@ function checkWinner(player,computerSelection){
                   return "DRAW"
                   }
               
-    // scissors
     case 'SCISSORS':
       if(computerSelection === "PAPER"){
         //score++;

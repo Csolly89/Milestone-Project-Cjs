@@ -2,12 +2,16 @@ const playerText = document.querySelector("#player1");
 const computerText = document.querySelector("#skynet");
 const resultText = document.querySelector("#outcome");
 const choiceBtns = document.querySelectorAll(".yourChoice");
+
+
 let player;
 let computer;
 let result;
 
-choiceBtns.forEach(button => button.addEventListener("click", () => {
+let humanWon = false;
+let compWon = false;
 
+choiceBtns.forEach(button => button.addEventListener("click", () => {
     player = button.textContent;
     computerSlct = computerSelection();
     playerText.textContent = `Player: ${player}`;
@@ -18,59 +22,69 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
 function computerSelection(){
   const randNum = Math.floor(Math.random() * 3 )
     if (randNum === 0) {
-      return "ROCK"
+      return "Rock"
     } else if (randNum === 1){
-      return "PAPER"
+      return "Paper"
       } else {
-          return "SCISSORS"
+          return "Scissors"
         }
 }
 
 function checkWinner(player,computerSelection){
 
   switch(player){
-    case 'ROCK': 
-      if(computerSelection === "SCISSORS"){
-        //score++;
+    case 'Rock': 
+      if(computerSelection === "Scissors"){
+       humanWon = true;
           return "VICTORY!!"
         }
-          else if(computerSelection === "PAPER"){
-            //score--;
+          else if(computerSelection === "Paper"){
+            compWon = true;
             return "DOOM TO YOU";
             }
               else {
                 return "DRAW"
                 }
         
-    case 'PAPER':
-      if(computerSelection === "ROCK"){
-        //score++;
+    case 'Paper':
+      if(computerSelection === "Rock"){
+        humanWon = true;
           return "VICTORY!!"
           }
-            else if(computerSelection === "SCISSORS"){
-             //score--;
+            else if(computerSelection === "Scissors"){
+              compWon = true;
                 return "DOOM TO YOU";
               }
                 else {
                   return "DRAW"
                   }
               
-    case 'SCISSORS':
-      if(computerSelection === "PAPER"){
-        //score++;
+    case 'Scissors':
+      if(computerSelection === "Paper"){
+        humanWon = true;
           return "VICTORY!!"
         }
-          else if(computerSelection === "ROCK"){
-            //score--;
+          else if(computerSelection === "Rock"){
+            compWon = true;
             return "DOOM TO YOU";
             }
               else {
                 return "DRAW"
                }
-              
   }
+
+if (humanWon) increaseScore(playerscore)
+if (compWon) increaseScore(compscore)
 }
 
+function increaseScore(compscore,playerscore){
+ compscore.innerText = parseInt(compscore.innerText) ++
+ playerscore.innerText = parseInt(playerscore.innerText) ++
+}
+
+const compscore = document.querySelector('.compscore')
+console.log(compscore)
+const playerscore = document.querySelector('.yourscore')
+console.log(playerscore)
 
 // datastacks-arrays - dynamically expand array - delete array after each loss so it'll take when it gets to 3 and triggers lava function
-// import-export js scripts from to another for lava function at the end

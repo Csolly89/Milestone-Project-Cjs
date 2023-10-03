@@ -90,3 +90,7 @@ function increaseScore(element){
 // when array.length = 3 trigger css code display none to visible snd auto win
 
 // datastacks-arrays - dynamically expand array - delete array after each loss so it'll take when it gets to 3 and triggers lava function
+//There are various methods to empty an array in JavaScript. 
+//Assigning the array to an empty array is the quickest method of emptying an array in JavaScript. 
+ //   In javascript, length is a property that, when set to 0, clears the array. 
+ //   splice() method can be used to delete 1 or more elements from the array in JavaScript.

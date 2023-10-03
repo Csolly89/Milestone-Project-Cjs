@@ -2,7 +2,8 @@ const playerText = document.querySelector("#player1");
 const computerText = document.querySelector("#skynet");
 const resultText = document.querySelector("#outcome");
 const choiceBtns = document.querySelectorAll(".yourChoice");
-
+const compscore = document.querySelector('.compscore')
+const playerscore = document.querySelector('.yourscore')
 
 let player;
 let computer;
@@ -35,11 +36,12 @@ function checkWinner(player,computerSelection){
   switch(player){
     case 'Rock': 
       if(computerSelection === "Scissors"){
-       humanWon = true;
-          return "VICTORY!!"
+        increaseScore(playerscore)
+       return "VICTORY!!"
+
         }
           else if(computerSelection === "Paper"){
-            compWon = true;
+            increaseScore(compscore)
             return "DOOM TO YOU";
             }
               else {
@@ -48,12 +50,12 @@ function checkWinner(player,computerSelection){
         
     case 'Paper':
       if(computerSelection === "Rock"){
-        humanWon = true;
-          return "VICTORY!!"
+        increaseScore(playerscore)
+        return "VICTORY!!"
           }
             else if(computerSelection === "Scissors"){
-              compWon = true;
-                return "DOOM TO YOU";
+              increaseScore(compscore)
+              return "DOOM TO YOU";
               }
                 else {
                   return "DRAW"
@@ -61,30 +63,29 @@ function checkWinner(player,computerSelection){
               
     case 'Scissors':
       if(computerSelection === "Paper"){
-        humanWon = true;
-          return "VICTORY!!"
+        increaseScore(playerscore)
+        return "VICTORY!!"
         }
           else if(computerSelection === "Rock"){
-            compWon = true;
+            increaseScore(compscore)
             return "DOOM TO YOU";
             }
               else {
                 return "DRAW"
                }
   }
-
-if (humanWon) increaseScore(playerscore)
-if (compWon) increaseScore(compscore)
 }
 
-function increaseScore(compscore,playerscore){
- compscore.innerText = parseInt(compscore.innerText) ++
- playerscore.innerText = parseInt(playerscore.innerText) ++
-}
+function increaseScore(element){
+  console.log("Calling increase score")
+  let score =  parseInt(element.innerText)
+  console.log(score)
+  score++
+  element.innerText = score
+  
+ }
 
-const compscore = document.querySelector('.compscore')
-console.log(compscore)
-const playerscore = document.querySelector('.yourscore')
-console.log(playerscore)
+
+
 
 // datastacks-arrays - dynamically expand array - delete array after each loss so it'll take when it gets to 3 and triggers lava function

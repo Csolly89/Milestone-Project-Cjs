@@ -86,6 +86,7 @@ function increaseScore(element){
  }
 
 
-
+// if element = playerscore, erase array data...if compscore push 1 to array...
+// when array.length = 3 trigger css code display none to visible snd auto win
 
 // datastacks-arrays - dynamically expand array - delete array after each loss so it'll take when it gets to 3 and triggers lava function

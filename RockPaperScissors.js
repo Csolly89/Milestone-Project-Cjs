@@ -2,6 +2,7 @@ const playerText = document.querySelector("#player1");
 const computerText = document.querySelector("#skynet");
 const resultText = document.querySelector("#outcome");
 const choiceBtns = document.querySelectorAll(".yourChoice");
+
 const compscore = document.querySelector('.compscore')
 const playerscore = document.querySelector('.yourscore')
 
@@ -9,15 +10,13 @@ let player;
 let computer;
 let result;
 
-let humanWon = false;
-let compWon = false;
-
 choiceBtns.forEach(button => button.addEventListener("click", () => {
     player = button.textContent;
     computerSlct = computerSelection();
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Skynet: ${computerSlct}`;
     resultText.textContent = checkWinner(player, computerSlct);
+    lavaEasterEgg()
 }));
 
 function computerSelection(){
@@ -37,7 +36,7 @@ function checkWinner(player,computerSelection){
     case 'Rock': 
       if(computerSelection === "Scissors"){
         increaseScore(playerscore)
-       return "VICTORY!!"
+        return "VICTORY!!"
 
         }
           else if(computerSelection === "Paper"){
@@ -73,19 +72,31 @@ function checkWinner(player,computerSelection){
               else {
                 return "DRAW"
                }
+
+    case 'Lava':
+        default:
+        increaseScore(playerscore)
+        return "Victory!!"
+                
   }
 }
 
 function increaseScore(element){
-  console.log("Calling increase score")
   let score =  parseInt(element.innerText)
-  console.log(score)
   score++
   element.innerText = score
   
+  if(element == playerscore) Ls.length = 0
+  if(element == compscore) Ls.push(1)
+  console.log(Ls)
  }
 
+//  empty array to fill and track 
+ let Ls = []
 
-
-
-// datastacks-arrays - dynamically expand array - delete array after each loss so it'll take when it gets to 3 and triggers lava function
+ function lavaEasterEgg (){
+  if (Ls.length === 3){
+  document.querySelector('#easterEgg').style.display = 'block';
+ } else {document.querySelector('#easterEgg').style.display = 'none'}
+ }
+ 

@@ -9,28 +9,33 @@
 <body>
     <div id="background">
         <div id="gameContainer">
-            <h1 class="displayText" id="player1">Player: </h1>
-            <h1 class="displayText" id="skynet">Skynet:  </h1>
-            <h1 class="displayText" id="outcome">Outcome: </h1>
-
+            <div><img id ="T1" src="/assets/Terminator.avif" alt="Terminator exposed exoskeleton" ></div> 
+                <!-- header/title text -->
+            <h1 id="title" >Judgement</h1>
+            <h1 id="title2"> Day </h1>
+            <h3 id="title3"> - RPS </h3>
+                <!-- Game text -->
             <div id ="buttons">
-                <button class="yourChoice">Rock</button>
-                <button class="yourChoice">Paper</button>
-                <button class="yourChoice">Scissors</button>
-                <div id="easterEgg">
-                 <h4>Come with Me if you want to Live!!</h4> 
-                <button class="yourChoice">Lava</button>
-                </div>
+                <div><button id="Rock" class="yourChoice">Rock</button></div>
+                <div><button id="Paper" class="yourChoice">Paper</button></div>
+                <div><button id="Scissors" class="yourChoice">Scissors</button></div>
             </div>
-
-            <h3>Human
-                <span class="yourscore">0</span>
-                 -
-                <span class="compscore">0</span>
-                 Skynet</h3>
+            <h2 class="displayText" id="player1">Player: </h2>
+            <h2 class="displayText" id="skynet">Skynet:  </h2>
+            <h2 class="displayText" id="outcome">Outcome: </h2>
+            <h3 class="totalscore">Mankind
+            <span class="yourscore">0</span> -
+            <span class="compscore">0</span>
+            Skynet</h3>
+            <div id="easterEgg">
+                <h4>Come with Me if you want to Live!!</h4> 
+                <button id="Lava" class="yourChoice">Lava</button>
+            </div>
+                    
         </div>
     </div>
 
+    
     <script src="RockPaperScissors.js"></script>
 </body>
 </html>

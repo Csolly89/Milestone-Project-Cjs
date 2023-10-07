@@ -41,7 +41,7 @@ function checkWinner(player,computerSelection){
         }
           else if(computerSelection === "Paper"){
             increaseScore(compscore)
-            return "DOOM TO YOU";
+            return "Judgement Day has come!!!";
             }
               else {
                 return "DRAW"
@@ -54,7 +54,7 @@ function checkWinner(player,computerSelection){
           }
             else if(computerSelection === "Scissors"){
               increaseScore(compscore)
-              return "DOOM TO YOU";
+              return "Judgement Day has come!!!";
               }
                 else {
                   return "DRAW"
@@ -67,7 +67,7 @@ function checkWinner(player,computerSelection){
         }
           else if(computerSelection === "Rock"){
             increaseScore(compscore)
-            return "DOOM TO YOU";
+            return "Judgement Day has come!!!";
             }
               else {
                 return "DRAW"
@@ -95,7 +95,7 @@ function increaseScore(element){
  let Ls = []
 
  function lavaEasterEgg (){
-  if (Ls.length === 3){
+  if (Ls.length === 2){
   document.querySelector('#easterEgg').style.display = 'block';
  } else {document.querySelector('#easterEgg').style.display = 'none'}
  }

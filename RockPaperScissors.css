@@ -110,6 +110,12 @@
     display: none;
 }
 
+
+#Andthen{
+    display: none;
+}
+
+
 h4{
     position: relative;
     bottom: 18rem;

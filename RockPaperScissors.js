@@ -89,7 +89,7 @@ function increaseScore(element){
   if(element == playerscore) Ls.length = 0
   if(element == compscore) Ls.push(1)
   console.log(Ls)
- }
+}
 
 //  empty array to fill and track 
  let Ls = []
@@ -98,5 +98,15 @@ function increaseScore(element){
   if (Ls.length === 2){
   document.querySelector('#easterEgg').style.display = 'block';
  } else {document.querySelector('#easterEgg').style.display = 'none'}
+
  }
  
+//  Best 2 of 3 win statement.. after player has won 2 of 3 games or won via lava(instawin) alert comes across
+// that skynet has gone back in time and must be followed to be stopped once again (reload the page)
+
+  let restartButton = document.querySelector("#Endgame")
+  if (playerscore == 2){document.querySelector("#Endgame").style.display='block';
+    alert("Skynet has gone back in time to prevent their loss.. Follow them and prevent Judgement day again")};
+  restartButton.addEventListener('click', () => {
+    location.reload();
+  })

@@ -1,4 +1,4 @@
-alert("Skynet is moments away from going live and taking over the entire internet to begin launching Nukes across the world and bring upon Judgment Day. John Connor has installed a backdoor to prevent Skynet from going live, a game of Rock, Paper & Scissors. Best 2 or 3 wins and if it seems like you may lose, Don't be afraid to break the traditional rules and make sure that Skynet Doesn't Win!!")
+// alert("Skynet is moments away from going live and taking over the entire internet to begin launching Nukes across the world and bring upon Judgment Day. John Connor has installed a backdoor to prevent Skynet from going live, a game of Rock, Paper & Scissors. Best 2 or 3 wins and if it seems like you may lose, Don't be afraid to break the traditional rules and make sure that Skynet Doesn't Win!!")
 
 const playerText = document.querySelector("#player1");
 const computerText = document.querySelector("#skynet");

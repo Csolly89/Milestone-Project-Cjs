@@ -111,8 +111,15 @@
 }
 
 
-#Andthen{
+#Endgame{
     display: none;
+    position: relative;
+    left: 35rem;
+    bottom: 50rem;
+    line-height: 8rem;
+    width: 50rem;
+    font-size: large;
+    border-radius: 50px;
 }
 
 

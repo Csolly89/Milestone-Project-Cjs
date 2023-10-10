@@ -1,6 +1,6 @@
 # Milestone-Project-Cjs
 
-Thank you for joining me and John Connor to save the human race and prevent Dooms Day!!
+Thank you for joining me and John Connor to save the human race and prevent Judgement Day!!
 Before skynet went live, we were able to install a backdoor measure that will give us the chance to survive.. Best we could do at the time, Give us a chance at game of Rock, Paper and Scissors
 to save mankind.. If all hope is lost and it seems like we can not win, best bet is to throw the terminal into the Lava and hope it doesn't escape into the internet..
 

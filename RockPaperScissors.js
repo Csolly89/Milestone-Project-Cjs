@@ -23,6 +23,7 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
     lavaEasterEgg()
 }));
 
+// instant win when you click lava button and display's alert and shows endgame button
 document.getElementById("Lava").addEventListener('click', () => {
   document.querySelector("#Endgame").style.display='block'
   alert("Skynet has gone back in time to prevent their loss.. Follow them and prevent Judgement day again")
